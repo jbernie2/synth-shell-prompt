@@ -111,7 +111,7 @@ getGitBranch()
 
 				## Get timestamp
 				if [ -d "$dot_git" -a -e "${dot_git}/FETCH_HEAD" ]; then
-					local git_last_update=$(stat -c "%Y" "${dot_git}/FETCH_HEAD")
+					local git_last_update=$(stat -f "%m" "${dot_git}/FETCH_HEAD")
 				fi
 
 				## Update if it's time to do so
